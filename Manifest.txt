@@ -22,6 +22,6 @@ lib/vimeo/simple/channel.rb
 lib/vimeo/simple/clip.rb
 lib/vimeo/simple/group.rb
 lib/vimeo/simple/user.rb
-test/advanced/upload_test.rb
+test/advanced/test_upload.rb
 test/test_helper.rb
 vimeo.gemspec

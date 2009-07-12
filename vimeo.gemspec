@@ -1,4 +1,3 @@
-(in /Users/apatterson/git/vimeo)
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
@@ -11,7 +10,7 @@ Gem::Specification.new do |s|
   s.description = %q{}
   s.email = ["matthooks@gmail.com"]
   s.extra_rdoc_files = ["Manifest.txt", "CHANGELOG.rdoc", "README.rdoc"]
-  s.files = ["CHANGELOG.rdoc", "LICENSE", "Manifest.txt", "README.rdoc", "Rakefile", "VERSION.yml", "lib/vimeo.rb", "lib/vimeo/advanced.rb", "lib/vimeo/advanced/auth.rb", "lib/vimeo/advanced/base.rb", "lib/vimeo/advanced/contact.rb", "lib/vimeo/advanced/group.rb", "lib/vimeo/advanced/person.rb", "lib/vimeo/advanced/test.rb", "lib/vimeo/advanced/upload.rb", "lib/vimeo/advanced/video.rb", "lib/vimeo/simple.rb", "lib/vimeo/simple/activity.rb", "lib/vimeo/simple/album.rb", "lib/vimeo/simple/base.rb", "lib/vimeo/simple/channel.rb", "lib/vimeo/simple/clip.rb", "lib/vimeo/simple/group.rb", "lib/vimeo/simple/user.rb", "test/advanced/upload_test.rb", "test/test_helper.rb", "vimeo.gemspec", "test/advanced/test_upload.rb"]
+  s.files = ["CHANGELOG.rdoc", "LICENSE", "Manifest.txt", "README.rdoc", "Rakefile", "VERSION.yml", "lib/vimeo.rb", "lib/vimeo/advanced.rb", "lib/vimeo/advanced/auth.rb", "lib/vimeo/advanced/base.rb", "lib/vimeo/advanced/contact.rb", "lib/vimeo/advanced/group.rb", "lib/vimeo/advanced/person.rb", "lib/vimeo/advanced/test.rb", "lib/vimeo/advanced/upload.rb", "lib/vimeo/advanced/video.rb", "lib/vimeo/simple.rb", "lib/vimeo/simple/activity.rb", "lib/vimeo/simple/album.rb", "lib/vimeo/simple/base.rb", "lib/vimeo/simple/channel.rb", "lib/vimeo/simple/clip.rb", "lib/vimeo/simple/group.rb", "lib/vimeo/simple/user.rb", "test/advanced/test_upload.rb", "test/test_helper.rb", "vimeo.gemspec"]
   s.homepage = %q{http://github.com/matthooks/vimeo}
   s.rdoc_options = ["--main", "README.rdoc"]
   s.require_paths = ["lib"]
