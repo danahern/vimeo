@@ -1,11 +1,10 @@
-$:.unshift(File.dirname(__FILE__))
-require 'simple/base'
-require 'simple/activity'
-require 'simple/album'
-require 'simple/channel'
-require 'simple/clip'
-require 'simple/group'
-require 'simple/user'
+require 'vimeo/simple/base'
+require 'vimeo/simple/activity'
+require 'vimeo/simple/album'
+require 'vimeo/simple/channel'
+require 'vimeo/simple/clip'
+require 'vimeo/simple/group'
+require 'vimeo/simple/user'
 
 module Vimeo
   module Simple
