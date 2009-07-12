@@ -13,12 +13,12 @@ module Vimeo
         @auth = { :api_key => api_key }
         @secret = secret
       end
-      
+
       # Generates a link that allows a user to authorize
       # your web application to use the advanced API
-      def login_link(perms)
+      def login_link(perms, frob)
         api_sig = generate_api_sig :perms => perms
-        "http://vimeo.com/services/auth/?api_key=#{@auth[:api_key]}&perms=#{perms}&api_sig=#{api_sig}"
+        "http://vimeo.com/services/auth/?api_key=#{@auth[:api_key]}&perms=#{perms}&api_sig=#{api_sig}&frob=#{frob}"
       end
 
       # TODO: Implement a function that returns the correct upload URL
@@ -32,7 +32,7 @@ module Vimeo
 
         generate_api_sig sig_options
       end
-      
+
       private
 
       # Generates a MD5 hashed API signature for Advanced API requests
@@ -43,14 +43,21 @@ module Vimeo
         api_sig = options.sort { |a, b| a.to_s <=> b.to_s }.join
         Digest::MD5.hexdigest("#{@secret}#{api_sig}")
       end
-      
+
       def query(sig_options, api_sig)
         sig_options.merge :api_key => @auth[:api_key], :api_sig => api_sig
       end
-      
+
       def make_request(sig_options)
         api_sig = generate_api_sig sig_options
         self.class.post "/api/rest", :query => query(sig_options, api_sig)
+      end
+
+      def rand_string len
+        chars = ('a'..'z').to_a + ('A'..'Z').to_a
+        string = ''
+        1.upto(len) { |i| string << chars[rand(chars.size-1)] }
+        string
       end
 
     end # Base
