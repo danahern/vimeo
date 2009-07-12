@@ -18,7 +18,7 @@ module Vimeo
       # your web application to use the advanced API
       def login_link(perms, frob)
         api_sig = generate_api_sig :perms => perms
-        "http://vimeo.com/services/auth/?api_key=#{@auth[:api_key]}&perms=#{perms}&api_sig=#{api_sig}&frob=#{frob}"
+        "http://vimeo.com/services/auth/?api_key=#{@auth[:api_key]}&perms=#{perms}&frob=#{frob}&api_sig=#{api_sig}"
       end
 
       # TODO: Implement a function that returns the correct upload URL
