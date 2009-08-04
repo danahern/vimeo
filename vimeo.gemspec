@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{vimeo}
-  s.version = "1.3.0"
+  s.version = "1.3.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Matt Hooks"]
-  s.date = %q{2009-07-11}
+  s.date = %q{2009-08-03}
   s.description = %q{}
   s.email = ["matthooks@gmail.com"]
   s.extra_rdoc_files = ["Manifest.txt", "CHANGELOG.rdoc", "README.rdoc"]
@@ -25,13 +25,16 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<jnunemaker-httparty>, [">= 0.2.6"])
+      s.add_runtime_dependency(%q<curb>, [">= 0"])
       s.add_development_dependency(%q<hoe>, [">= 2.3.2"])
     else
       s.add_dependency(%q<jnunemaker-httparty>, [">= 0.2.6"])
+      s.add_dependency(%q<curb>, [">= 0"])
       s.add_dependency(%q<hoe>, [">= 2.3.2"])
     end
   else
     s.add_dependency(%q<jnunemaker-httparty>, [">= 0.2.6"])
+    s.add_dependency(%q<curb>, [">= 0"])
     s.add_dependency(%q<hoe>, [">= 2.3.2"])
   end
 end
