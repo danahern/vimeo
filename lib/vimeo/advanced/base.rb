@@ -50,7 +50,8 @@ module Vimeo
 
       def make_request(sig_options)
         api_sig = generate_api_sig sig_options
-        self.class.post "/api/rest", :query => query(sig_options, api_sig)
+				puts "/api/rest/v2/?#{query(sig_options, api_sig).to_params}"
+        self.class.post "/api/rest/v2/", :query => query(sig_options, api_sig)
       end
 
       def rand_string len
