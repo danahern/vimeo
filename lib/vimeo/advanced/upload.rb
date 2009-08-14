@@ -26,14 +26,15 @@ module Vimeo
         make_request sig_options
       end
 
-			def confirm_upload(auth_token, json_manifest)
+			def confirm_upload(auth_token, ticket_id, json_manifest)
         sig_options = {
-          :json_manifest => json_manifest,
           :auth_token => auth_token,
+					:ticket_id => ticket_id,
           :method => "vimeo.videos.upload.confirm"
         }
-
-        make_request sig_options
+				api_sig = generate_api_sig(sig_options)
+				puts "/api/rest/v2/?#{query(sig_options, api_sig).to_params}"
+				self.class.post "/api/rest/v2/", :body => query(sig_options.merge(:json_manifest => json_manifest), api_sig)
       end
 
       ###
