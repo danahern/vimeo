@@ -146,11 +146,10 @@ module Vimeo
         make_request sig_options
       end
 
-      def get_thumbnail_url(video_id, size=100)
+      def get_thumbnail_url(video_id)
         sig_options = {
           :video_id => video_id,
-          :size => size,
-          :method => "vimeo.videos.getThumbnailUrl"
+          :method => "vimeo.videos.getThumbnailUrls"
         }
 
         make_request sig_options
